@@ -1,7 +1,7 @@
 ﻿# Kişisel Enflasyon Asistanı
 
 ## Takım İsmi
-[Buraya takım adını yazın]
+YZTA - 319 
 
 ## Takım Logosu
 [Buraya takım logosu görseli eklenecek]
