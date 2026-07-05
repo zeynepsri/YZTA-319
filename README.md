@@ -14,6 +14,7 @@ YZTA - 319
 | [Fotoğraf] | Zeynep Sarı | Product Owner | www.linkedin.com/in/zeynep-sarı-008122257 / https://github.com/zeynepsri |
 | [Fotoğraf] | [İsim Soyisim] | [Rol] | [LinkedIn / GitHub] |
 | [Fotoğraf] | [İsim Soyisim] | [Rol] | [LinkedIn / GitHub] |
+| [Fotoğraf] | [İsim Soyisim] | [Rol] | [LinkedIn / GitHub] |
 
 ## Proje İsmi
 Kişisel Enflasyon Asistanı
