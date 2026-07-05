@@ -13,7 +13,9 @@ YZTA - 319
 | [Fotoğraf] | [İsim Soyisim] | [Rol] | [LinkedIn / GitHub] |
 | [Fotoğraf] | Zeynep Sarı | Product Owner | www.linkedin.com/in/zeynep-sarı-008122257 / https://github.com/zeynepsri |
 | [Fotoğraf] | Emircan Gündüz | Developer | www.linkedin.com/in/emircangunduz / https://github.com/EmircanG78 |
-| [Fotoğraf] | [İsim Soyisim] | [Rol] | [LinkedIn / GitHub] |
+| [Fotoğraf] | Asel Ünlü | Developer | 
+www.linkedin.com/in/asel-ünlü /
+https://github.com/asel896 |
 | [Fotoğraf] | [İsim Soyisim] | [Rol] | [LinkedIn / GitHub] |
 
 ## Proje İsmi
