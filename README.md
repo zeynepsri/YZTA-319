@@ -14,7 +14,7 @@ YZTA - 319
 | [Fotoğraf] | Zeynep Sarı | Product Owner | www.linkedin.com/in/zeynep-sarı-008122257 / https://github.com/zeynepsri |
 | [Fotoğraf] | Emircan Gündüz | Developer | www.linkedin.com/in/emircangunduz / https://github.com/EmircanG78 |
 | [Fotoğraf] | Asel Ünlü | Developer | www.linkedin.com/in/asel-ünlü / https://github.com/asel896 |
-| [Fotoğraf] | Safiye | [Rol] | [LinkedIn / GitHub] |
+| [Fotoğraf] | Safiye Kantar | Developer | https://www.linkedin.com/in/safiye-kantar/ / https://github.com/SafiyeKntr |
 
 ## Proje İsmi
 Kişisel Enflasyon Asistanı
