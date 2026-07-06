@@ -99,10 +99,20 @@ Toplam iş yükü 3 sprinte bölünerek planlandı. İlk sprintte ürün iskelet
 Backlog, önce veri alma ve işleme katmanını oluşturacak şekilde düzenlendi. Sprint 1’de öncelik, ürünün çekirdeğini oluşturan OCR ve kategori mantığının tasarlanmasına verildi.
 
 ## Daily Scrum
-Daily Scrum toplantıları [buraya araç](#) üzerinden yürütüldü. Günlük ilerlemeler ve engeller kısa formatta takip edildi.
+Daily Scrum toplantıları WhatsApp üzerinden yürütüldü. Günlük ilerlemeler ve engeller kısa formatta takip edildi.
+
+04.07.2026:
+<img width="1469" height="687" alt="WhatsApp Image 2026-07-06 at 17 53 01 (1)" src="https://github.com/user-attachments/assets/de282845-d83c-464e-ac63-026b899400e8" />
+<img width="1070" height="560" alt="WhatsApp Image 2026-07-06 at 17 53 02" src="https://github.com/user-attachments/assets/bdf893ce-022a-41e3-b0d3-37a4b7d6bcfc" />
+<img width="985" height="758" alt="WhatsApp Image 2026-07-06 at 17 53 01" src="https://github.com/user-attachments/assets/3c135e8f-39ee-455f-8c1a-0aad4a694862" />
+
+
+Sprint board update: Sprint board screenshot:
+<img width="1512" height="621" alt="sprintboard" src="https://github.com/user-attachments/assets/4313696b-ca91-41e1-9d6f-ecec05f1a2cc" />
 
 ## Ürün Durumu: Ekran Görüntüleri
-[Buraya Sprint 1 ekran görüntüsü eklenecek]
+<img width="1672" height="941" alt="urun_goruntu" src="https://github.com/user-attachments/assets/dcf5e7d8-5a71-48ea-9f5b-5efe0697b982" />
+
 
 ## Sprint Review
 - Proje fikrinin teknik ve ürün tarafı onaylandı.
