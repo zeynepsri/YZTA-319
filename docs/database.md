@@ -111,13 +111,83 @@ TÜİK resmi enflasyon verileri.
 
 ---
 
+### price_history
+Ürünlerin zaman içindeki fiyat geçmişi. receipt_items'tan türetilir.
+
+| Kolon | Tip | Açıklama |
+|-------|-----|----------|
+| id | BIGSERIAL | Primary key |
+| product_id | BIGINT | Bağlı ürün (FK) |
+| store_id | BIGINT | Bağlı market (FK) |
+| price | DECIMAL | Kayıtlı fiyat |
+| recorded_date | DATE | Fiyatın kayıt tarihi |
+| source_receipt_item_id | BIGINT | Kaynak fiş kalemi (FK) |
+| created_at | TIMESTAMP | Oluşturulma tarihi |
+
+---
+
+### monthly_inflation
+Kullanıcı bazlı aylık kişisel enflasyon hesaplaması ve TÜİK karşılaştırması.
+
+| Kolon | Tip | Açıklama |
+|-------|-----|----------|
+| id | BIGSERIAL | Primary key |
+| user_id | UUID | Bağlı kullanıcı (FK) |
+| year_month | DATE | Hesaplama ayı (ayın ilk günü) |
+| personal_inflation_rate | DECIMAL | Kullanıcının kişisel enflasyon oranı (%) |
+| basket_total_current | DECIMAL | Bu ayki sepet toplamı |
+| basket_total_previous | DECIMAL | Önceki ayki sepet toplamı |
+| category_breakdown | JSONB | Kategori bazlı detaylı kırılım |
+| official_inflation_rate | DECIMAL | O aya ait TÜİK oranı (referans kopya) |
+| created_at | TIMESTAMP | Oluşturulma tarihi |
+
+**Not:** `user_id + year_month` kombinasyonu unique'tir, kullanıcı başına ayda bir kayıt olur.
+
+---
+
+### user_goals
+Kullanıcının bütçe/tasarruf hedefleri.
+
+| Kolon | Tip | Açıklama |
+|-------|-----|----------|
+| id | BIGSERIAL | Primary key |
+| user_id | UUID | Bağlı kullanıcı (FK) |
+| category_id | INT | Bağlı kategori (FK, NULL ise genel hedef) |
+| target_amount | DECIMAL | Hedef tutar |
+| period_start | DATE | Hedef dönem başlangıcı |
+| period_end | DATE | Hedef dönem bitişi |
+| status | VARCHAR | active / completed / failed |
+| created_at | TIMESTAMP | Oluşturulma tarihi |
+
+---
+
+### ai_conversations
+AI agent (Receipt, Inflation, Memory) konuşma logları.
+
+| Kolon | Tip | Açıklama |
+|-------|-----|----------|
+| id | BIGSERIAL | Primary key |
+| user_id | UUID | Bağlı kullanıcı (FK) |
+| session_id | UUID | Konuşma oturumu kimliği |
+| agent_type | VARCHAR | receipt / inflation / memory |
+| role | VARCHAR | user / assistant / system |
+| message | TEXT | Mesaj içeriği |
+| metadata | JSONB | Token sayısı, model adı, function call bilgisi vb. |
+| created_at | TIMESTAMP | Oluşturulma tarihi |
+
+---
+
 ## İlişkiler
 - Bir kullanıcının birden fazla fişi olabilir
 - Bir fişin birden fazla ürün kalemi olabilir
 - Her ürün kalemi bir kategoriye bağlıdır
 - TÜİK verileri kategorilerle eşleştirilir
+- Bir kullanıcının birden fazla hedefi (user_goals) olabilir
+- Bir kullanıcının birden fazla AI konuşma oturumu (ai_conversations) olabilir
+- price_history, receipt_items'tan türetilen fiyat geçmişini tutar
+- monthly_inflation, kullanıcı bazlı enflasyonu official_inflation ile karşılaştırır
 
 ## Sprint Planı
 - Sprint 1: Temel tablolar ✅
-- Sprint 2: PriceHistory, MonthlyInflation, UserGoals, AIConversations
+- Sprint 2: PriceHistory, MonthlyInflation, UserGoals, AIConversations ✅
 - Sprint 3: pgvector, UserMemory, ShoppingPatterns
