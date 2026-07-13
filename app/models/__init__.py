@@ -1,0 +1,1 @@
+# Emircan DB modellerini buraya ekleyecek

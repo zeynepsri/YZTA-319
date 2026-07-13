@@ -1,0 +1,1 @@
+# Pydantic şemaları burada toplanacak
