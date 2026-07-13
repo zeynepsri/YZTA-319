@@ -1,24 +1,64 @@
-from fastapi import APIRouter, UploadFile, File
+from fastapi import APIRouter, UploadFile, File, HTTPException, status
 import os
+from datetime import datetime
 
 router = APIRouter(prefix="/receipt", tags=["Receipt"])
 
 UPLOAD_DIR = "uploaded_receipts"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-@router.post("/upload")
-async def upload_receipt(file: UploadFile = File(...)):
+# Emircan veritabanını bağlayana kadar yüklenen fişleri tutacağımız geçici hafıza (Mock DB)
+FAKE_RECEIPT_DB = {}
+receipt_id_counter = 1
+
+@router.post("/upload", status_code=status.HTTP_201_CREATED)
+async def upload_receipt(
+    user_id: int,  
+    file: UploadFile = File(...)
+):
+    global receipt_id_counter
+    
+    
     file_ext = os.path.splitext(file.filename)[1].lower()
     if file_ext not in [".jpg", ".jpeg", ".png", ".pdf"]:
-        return {"error": "Sadece JPG, PNG veya PDF yüklenebilir!"}
+        raise HTTPException(
+            status_code=400, 
+            detail="Geçersiz dosya formatı! Sadece JPG, PNG veya PDF yüklenebilir."
+        )
         
-    file_path = os.path.join(UPLOAD_DIR, file.filename)
     
-    with open(file_path, "wb") as f:
-        f.write(await file.read())
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+    safe_filename = f"user_{user_id}_{timestamp}{file_ext}"
+    file_path = os.path.join(UPLOAD_DIR, safe_filename)
+    
+    
+    try:
+        with open(file_path, "wb") as f:
+            f.write(await file.read())
+    except Exception:
+        raise HTTPException(status_code=500, detail="Dosya sunucuya kaydedilirken bir hata oluştu.")
         
-    return {
-        "message": "Fiş başarıyla yüklendi ve sunucuya kaydedildi.",
-        "filename": file.filename,
-        "saved_path": file_path
+   
+    receipt_record = {
+        "id": receipt_id_counter,
+        "user_id": user_id,
+        "market_name": None,      
+        "receipt_date": None,     
+        "total_amount": None,     
+        "file_path": file_path,
+        "status": "PENDING",       
+        "created_at": datetime.now().isoformat()
     }
+    
+    FAKE_RECEIPT_DB[receipt_id_counter] = receipt_record
+    receipt_id_counter += 1
+    
+    return {
+        "message": "Fiş başarıyla yüklendi ve işleme sırasına alındı (PENDING).",
+        "receipt": receipt_record
+    }
+
+# Test 
+@router.get("/list")
+async def list_receipts():
+    return list(FAKE_RECEIPT_DB.values())
