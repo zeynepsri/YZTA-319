@@ -155,17 +155,17 @@ Bu sprintte ürünün çalışır prototip haline gelmesi amaçlandı. Kullanıc
 Daily Scrum toplantıları WhatsApp üzerinden düzenli olarak sürdürüldü. Kararlar ve görev dağılımları sprint boyunca güncellendi.
 
 Tasarım alternatiflerinin değerlendirilmesi:
-<img width="1415" height="843" alt="daily_scrum_tasarim" src="<img width="1415" height="843" alt="image" src="https://github.com/user-attachments/assets/cdab0f2c-c28b-4550-a262-5e5193d83406" />
+<img width="1415" height="843" alt="daily_scrum_tasarim" src="https://github.com/user-attachments/assets/cdab0f2c-c28b-4550-a262-5e5193d83406" />
 
 Backend, veritabanı ve TÜİK veri entegrasyonu ilerlemesi:
-<img width="1422" height="708" alt="daily_scrum_backend_tuik" src="<img width="1422" height="708" alt="image" src="https://github.com/user-attachments/assets/38624f5d-860f-4126-a46d-cbb994ef79f5" />
+<img width="1422" height="708" alt="daily_scrum_backend_tuik" src="https://github.com/user-attachments/assets/38624f5d-860f-4126-a46d-cbb994ef79f5" />
 
 Sprint board update: Sprint board screenshot:
-<img width="1600" height="613" alt="sprintboard_sprint2" src="<img width="1600" height="613" alt="image" src="https://github.com/user-attachments/assets/891dbbfd-8668-4891-8a17-6bd780693e75" />
+<img width="1600" height="613" alt="sprintboard_sprint2" src="https://github.com/user-attachments/assets/891dbbfd-8668-4891-8a17-6bd780693e75" />
 
 ## Ürün Durumu: Ekran Görüntüleri
 Bu sprintte arayüz için hazırlanan 4 tasarım alternatifi (Neon Glow, Glass Neon, Purple Premium, Cyber Glass) değerlendirildi ve ilerlenecek tasarım yönü seçildi:
-<img width="1536" height="1024" alt="tasarim_alternatifleri" src="<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/593f46bd-1667-4266-8409-d138f68e803f" />
+<img width="1536" height="1024" alt="tasarim_alternatifleri" src="https://github.com/user-attachments/assets/593f46bd-1667-4266-8409-d138f68e803f" />
 
 ## Sprint Review
 - İlk çalışan prototip akışı gösterildi: kayıt/login, fiş yükleme ve veritabanına kayıt uçtan uca çalıştırıldı.
