@@ -1,4 +1,4 @@
-﻿# Kişisel Enflasyon Asistanı
+# Kişisel Enflasyon Asistanı
 
 ## Takım İsmi
 YZTA - 319 
@@ -130,10 +130,12 @@ Sprint board update: Sprint board screenshot:
 # Sprint 2
 
 ## Sprint Notları
-- Fiş yükleme ve OCR akışı geliştirildi.
-- Harcama kalemlerinin kategorilere ayrılması için ilk mantık kuruldu.
-- TÜİK verisini sistemde kullanılabilir hale getirecek entegrasyon planlandı.
-- Kişisel enflasyon hesaplama mantığı ilk kez çalıştırıldı.
+- FastAPI backend kuruldu; Swagger üzerinden çalışır durumda, JWT auth sistemi ile kayıt/login API’leri tamamlandı.
+- Telefondan fiş fotoğrafı yükleme akışı hazırlandı; ER diyagramına göre `users` ve `receipts` tabloları eşleştirildi, yüklenen fişler "beklemede" durumuyla kaydediliyor.
+- Gerçek Haziran 2026 TÜİK enflasyon verisi çekildi; `tuik_to_json.py` scripti hem temiz JSON’u hem de veritabanı migration’ını (.sql) otomatik üretiyor.
+- TÜİK verisi projenin 7 kategorisine eşleştirilerek `official_inflation` tablosuna yazıldı (test verisinin yerine gerçek veri geçti).
+- AI modelinin işleyeceği altyapı hazırlandı; her geliştirici kendi branch’inde ilerleyerek main’i koruyacak şekilde Git akışı standardize edildi.
+- Uygulama arayüzü için 4 farklı tasarım alternatifi (Neon Glow, Glass Neon, Purple Premium, Cyber Glass) değerlendirildi ve tasarım yönü belirlendi.
 
 ## Sprint içinde tamamlanması tahmin edilen puan
 100 Puan
@@ -150,20 +152,33 @@ Bu sprintte ürünün çalışır prototip haline gelmesi amaçlandı. Kullanıc
 5. Sonuç ekranı
 
 ## Daily Scrum
-Daily Scrum toplantıları düzenli olarak sürdürüldü. Kararlar ve görev dağılımları sprint boyunca güncellendi.
+Daily Scrum toplantıları WhatsApp üzerinden düzenli olarak sürdürüldü. Kararlar ve görev dağılımları sprint boyunca güncellendi.
+
+Tasarım alternatiflerinin değerlendirilmesi:
+<img width="1415" height="843" alt="daily_scrum_tasarim" src="<img width="1415" height="843" alt="image" src="https://github.com/user-attachments/assets/cdab0f2c-c28b-4550-a262-5e5193d83406" />
+
+Backend, veritabanı ve TÜİK veri entegrasyonu ilerlemesi:
+<img width="1422" height="708" alt="daily_scrum_backend_tuik" src="<img width="1422" height="708" alt="image" src="https://github.com/user-attachments/assets/38624f5d-860f-4126-a46d-cbb994ef79f5" />
+
+Sprint board update: Sprint board screenshot:
+<img width="1600" height="613" alt="sprintboard_sprint2" src="<img width="1600" height="613" alt="image" src="https://github.com/user-attachments/assets/891dbbfd-8668-4891-8a17-6bd780693e75" />
 
 ## Ürün Durumu: Ekran Görüntüleri
-[Buraya Sprint 2 ekran görüntüsü eklenecek]
+Bu sprintte arayüz için hazırlanan 4 tasarım alternatifi (Neon Glow, Glass Neon, Purple Premium, Cyber Glass) değerlendirildi ve ilerlenecek tasarım yönü seçildi:
+<img width="1536" height="1024" alt="tasarim_alternatifleri" src="<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/593f46bd-1667-4266-8409-d138f68e803f" />
 
 ## Sprint Review
-- İlk çalışan prototip akışı gösterildi.
+- İlk çalışan prototip akışı gösterildi: kayıt/login, fiş yükleme ve veritabanına kayıt uçtan uca çalıştırıldı.
+- Gerçek TÜİK verisinin `official_inflation` tablosuna migration ile aktarımı doğrulandı; her ay yeni Excel + script akışıyla güncellenmesi kararlaştırıldı (ileride EVDS API alternatifi değerlendirilecek).
 - OCR çıktılarının kalite sorunları değerlendirildi.
-- Kategori doğruluğunu artırmak için ek veri ve kural ihtiyacı konuşuldu.
+- Kategori doğruluğunu artırmak için ek veri ve kural ihtiyacı konuşuldu (İçecek ve Bebek kategorileri TÜİK gruplarıyla tahmini eşleştirildi).
 - Kişisel enflasyon ile resmi TÜİK enflasyonu arasındaki farkın kullanıcıya nasıl sunulacağı netleştirildi.
+- 4 tasarım alternatifi arasından takım oylamasıyla ilerlenecek tasarım yönü seçildi.
 
 ## Sprint Retrospective
 - OCR kalitesi için iyileştirme alanları belirlendi.
 - Agent’lar arası veri formatı standardize edilecek.
+- Branch bazlı çalışma düzeni korunacak; migration’ların DB’de doğrulanması süreci netleştirilecek.
 - Dashboard görünürlüğü ve anlaşılabilirliği artırılacak.
 
 ---
