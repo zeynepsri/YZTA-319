@@ -1,6 +1,8 @@
+import app.models
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth, receipt
+from app.api.v1.endpoints import auth
+from app.routers import receipt  
 
 app = FastAPI(
     title="AI Destekli Kişisel Enflasyon Analiz Platformu API",
@@ -15,8 +17,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router)
-app.include_router(receipt.router)
+
+app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
+app.include_router(receipt.router, prefix="/api/v1/receipts", tags=["Receipts"])
 
 @app.get("/")
 async def root():
