@@ -1,0 +1,162 @@
+{
+  "period": "2026-06",
+  "source": "TUIK",
+  "dataset": "Ana harcama gruplarına göre ağırlıklar, TÜFE ve değişim oranları",
+  "base_year": "2025=100",
+  "general": {
+    "name": "TÜFE",
+    "weight": 100.0,
+    "monthly_change": 0.99,
+    "change_to_dec": 17.76,
+    "yearly_change": 32.11,
+    "twelve_month_avg_change": 32.03,
+    "index": 129.99
+  },
+  "categories": [
+    {
+      "name": "Gıda ve alkolsüz içecekler",
+      "weight": 24.44,
+      "monthly_change": 0.17,
+      "change_to_dec": 19.89,
+      "yearly_change": 35.45,
+      "twelve_month_avg_change": 32.87,
+      "index": 131.89,
+      "project_categories": [
+        "Gıda",
+        "İçecek"
+      ]
+    },
+    {
+      "name": "Alkollü içecekler, tütün ve tütün ürünleri",
+      "weight": 2.75,
+      "monthly_change": 3.46,
+      "change_to_dec": 14.08,
+      "yearly_change": 34.15,
+      "twelve_month_avg_change": 30.26,
+      "index": 127.68,
+      "project_categories": [
+        "İçecek"
+      ]
+    },
+    {
+      "name": "Giyim ve ayakkabı",
+      "weight": 7.9,
+      "monthly_change": -0.18,
+      "change_to_dec": 6.96,
+      "yearly_change": 14.18,
+      "twelve_month_avg_change": 9.4,
+      "index": 116.3,
+      "project_categories": []
+    },
+    {
+      "name": "Konut, su, elektrik, gaz ve diğer yakıtlar",
+      "weight": 11.4,
+      "monthly_change": 2.3,
+      "change_to_dec": 23.15,
+      "yearly_change": 45.14,
+      "twelve_month_avg_change": 48.08,
+      "index": 141.62,
+      "project_categories": [
+        "Ev"
+      ]
+    },
+    {
+      "name": "Mobilya, mefruşat ve evde kullanılan ekipmanlar ile rutin ev bakım ve onarımı",
+      "weight": 7.92,
+      "monthly_change": 1.98,
+      "change_to_dec": 13.01,
+      "yearly_change": 22.32,
+      "twelve_month_avg_change": 24.83,
+      "index": 122.23,
+      "project_categories": [
+        "Ev",
+        "Temizlik"
+      ]
+    },
+    {
+      "name": "Sağlık",
+      "weight": 2.79,
+      "monthly_change": 1.17,
+      "change_to_dec": 24.11,
+      "yearly_change": 33.62,
+      "twelve_month_avg_change": 31.58,
+      "index": 130.98,
+      "project_categories": [
+        "Sağlık"
+      ]
+    },
+    {
+      "name": "Ulaştırma",
+      "weight": 16.62,
+      "monthly_change": -0.05,
+      "change_to_dec": 20.07,
+      "yearly_change": 31.15,
+      "twelve_month_avg_change": 29.83,
+      "index": 130.31,
+      "project_categories": []
+    },
+    {
+      "name": "Bilgi ve iletişim",
+      "weight": 3.1,
+      "monthly_change": 1.87,
+      "change_to_dec": 13.35,
+      "yearly_change": 25.57,
+      "twelve_month_avg_change": 21.4,
+      "index": 122.72,
+      "project_categories": []
+    },
+    {
+      "name": "Eğlence, dinlence, spor ve kültür",
+      "weight": 4.34,
+      "monthly_change": 1.0,
+      "change_to_dec": 14.81,
+      "yearly_change": 25.39,
+      "twelve_month_avg_change": 28.49,
+      "index": 124.65,
+      "project_categories": []
+    },
+    {
+      "name": "Eğitim hizmetleri",
+      "weight": 2.02,
+      "monthly_change": 1.72,
+      "change_to_dec": 17.66,
+      "yearly_change": 46.1,
+      "twelve_month_avg_change": 58.78,
+      "index": 139.77,
+      "project_categories": []
+    },
+    {
+      "name": "Lokantalar ve konaklama hizmetleri",
+      "weight": 11.13,
+      "monthly_change": 2.11,
+      "change_to_dec": 18.56,
+      "yearly_change": 31.61,
+      "twelve_month_avg_change": 32.95,
+      "index": 130.72,
+      "project_categories": []
+    },
+    {
+      "name": "Sigorta ve finansal hizmetler",
+      "weight": 1.07,
+      "monthly_change": 1.06,
+      "change_to_dec": 26.46,
+      "yearly_change": 28.07,
+      "twelve_month_avg_change": 30.16,
+      "index": 129.17,
+      "project_categories": []
+    },
+    {
+      "name": "Kişisel bakım, sosyal koruma ve çeşitli mal ve hizmetler",
+      "weight": 4.49,
+      "monthly_change": 1.04,
+      "change_to_dec": 11.54,
+      "yearly_change": 22.71,
+      "twelve_month_avg_change": 28.26,
+      "index": 122.11,
+      "project_categories": [
+        "Kozmetik",
+        "Bebek"
+      ]
+    }
+  ]
+}
